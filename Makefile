@@ -33,5 +33,5 @@ mask.png: zigzag.png
 merge.png: lock.png mask.png
 	convert lock.png mask.png \
     \( -clone 0 -alpha extract \) \
-    \( -clone 1,2 -compose multiply -composite -gravity center \) \
+    \( -clone 1,2 -compose multiply -composite \) \
     -delete 1,2 -compose over -compose copy_opacity -composite $@
